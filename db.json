@@ -1,0 +1,105 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "productName": "Macbook Pro M1",
+      "productCode": "UCD-0023",
+      "releaseDate": "March 15, 2023",
+      "description": "Màn hình Retina sống động, lôi cuốn",
+      "price": 32000000,
+      "starRating": 3.8,
+      "inStock": 5,
+      "imageUrl": "./assets/images/macbook.png"
+    },
+
+    {
+      "id": "2",
+      "productName": "Apple Watch Series 9 ",
+      "productCode": "TBX-0022",
+      "releaseDate": "May 15, 2016",
+      "description": "Hỗ trợ tập luyện khoa học, hiệu quả",
+      "price": 960000,
+      "starRating": 4.8,
+      "inStock": 5,
+      "imageUrl": "./assets/images/dongho.jpg"
+    },
+
+    {
+      "id": "3",
+      "productName": "Iphone 13",
+      "productCode": "GDN-0023",
+      "releaseDate": "March 30, 2016",
+      "description": "Thiết kế sang trọng và bền bỉ",
+      "price": 18000000,
+      "starRating": 4.2,
+      "inStock": 5,
+      "imageUrl": "./assets/images/iphone4.jpg"
+    },
+
+    {
+      "id": "4",
+      "productName": "IPad Pro M2",
+      "productCode": "ADE-0048",
+      "releaseDate": "May 21, 2018",
+      "description": "Màn hình Liquid Retina chân thực và sắc sảo",
+      "price": 20000000,
+      "starRating": 4.8,
+      "inStock": 5,
+      "imageUrl": "./assets/images/ipad.jpg"
+    },
+
+    {
+      "id": "5",
+      "productName": "Nồi Cơm Toshiba",
+      "productCode": "ADB-0039",
+      "releaseDate": "November 15, 2015",
+      "description": "Chế độ giữ ấm tự động, ",
+      "price": 3850000,
+      "starRating": 3.4,
+      "inStock": 5,
+      "imageUrl": "./assets/images/noicom.jpg"
+    },
+
+    {
+      "id": "6",
+      "productName": "Robot hút bụi",
+      "productCode": "ADB-0039",
+      "releaseDate": "November 15, 2018",
+      "description": "Hệ thống cảm biến, di chuyển thông minh",
+      "price": 4500000,
+      "starRating": 4.6,
+      "inStock": 5,
+      "imageUrl": "./assets/images/robot1.jpg"
+    },
+
+    {
+      "id": "7",
+      "productName": "Chuột Gaming Zadez",
+      "productCode": "GXA-0042",
+      "releaseDate": "October 20, 2016",
+      "description": "Hiển thị đèn LED RGB với màu sắc sống động",
+      "price": 900000,
+      "starRating": 4.6,
+      "inStock": 5,
+      "imageUrl": "./assets/images/chuot1.jpg"
+    },
+
+    {
+      "id": "8",
+      "productName": "Bàn phím DareU",
+      "productCode": "OXT-0038",
+      "releaseDate": "July 20, 2016",
+      "description": "Hệ thống đèn LED RGB độc đáo",
+      "price": 500000,
+      "starRating": 4.6,
+      "inStock": 5,
+      "imageUrl": "./assets/images/banphim.jpg"
+    }
+
+
+
+
+
+
+  ]
+}

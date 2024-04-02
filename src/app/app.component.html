@@ -1,0 +1,339 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-info">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+      <img class="brand-logo" src="/assets/images/thegioi.jpg" height="30px" alt="logo" aria-hidden="true">
+    </a>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" href="#"><i class="fa fa-wpforms" aria-hidden="true"></i> Introduce</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/list" href="#"><i class="fa fa-bars" aria-hidden="true"></i> Product list</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/cart/1" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+      </li>
+      <ng-container *ngIf="!isAuthenticated()">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/login" href="#"><i class="fa fa-user"></i> Login</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/register" href="#">Register</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="isAuthenticated()">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="logout()" routerLink="/logout" href="#"><i class="fa fa-sign-out"
+              aria-hidden="true"></i>Logout</a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+
+  <footer class="site-footer bg-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="footer-text">SHOP HUY HOÀNG
+            <div><a class="sdt" href="#"><i class="fa fa-phone " aria-hidden="true"></i></a> <a href=" tel:0964063355 ">
+                0964063355</a>
+            </div>
+            <div><i class="fa fa-map-marker" aria-hidden="true"></i> F.Studio 72A Nguyen Trai ( R4-49-50, Tầng B2, Vincom Mega Mall Royal City), Quận Thanh Xuân    , Hà Nội
+          </div>
+          </div>
+          <div><a href="mailto:cskh@hoaliti.com"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              huyhoang167@gmail.com</a></div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <div class="footer-wrapper-1">
+            <div class="footer-item info">
+              <div class="item-child">
+                <div class="footer-text"><b>CHÍNH SÁCH</b>
+                </div>
+
+              </div>
+              <div class="item-child">
+                <div class="footer-text ">
+                  <a href="">Chính sách mua hàng</a>
+                </div>
+                <div class="footer-text pointer">
+                  <a href=""> Quy định và hình thức thanh toán</a>
+                </div>
+                <div class="footer-text pointer">
+                  <a href=""> Vận chuyển / giao nhận</a>
+                </div>
+                <div class="footer-text pointer">
+                  <a href=""> Đổi trả hàng và hoàn tiền</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-3">
+          <div class="footer-item">
+            <div class="footer-text">HỆ THỐNG CỬA HÀNG<b>
+                <div>
+                  Cơ sở 1: 424 Cầu Giấy, Quận Cầu Giấy, Hà Nội <span> -
+                    <a href="tel: ‎0964 31 33 55"> ‎0964 31 33 55</a></span>
+                </div>
+                <div>
+                  Cơ sở 2: Số 5 lạc Long Quân, Quận Tây Hồ,Hà Nội <span> -
+                    <a href="tel:‎ 0964 26 33 55"> ‎0964 26 33 55</a>
+                  </span>
+                </div>
+
+
+              </b>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+            <a href="#">Scanfcode</a>.
+          </p>
+        </div> -->
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- <a href="">Copyright ITC</a> -->
+
+
+</div>
+
+<style>
+  .footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* hoặc giá trị mong muốn, ví dụ: 80% */
+    max-width: 1200px;
+    /* giới hạn độ rộng tối đa nếu cần */
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  footer-text {
+    color: white;
+  }
+
+  div a {
+    text-decoration: none;
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+
+  .site-footer {
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    margin-top: 6px;
+  }
+
+  .site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+  }
+
+  .site-footer hr.small {
+    margin: 20px 0
+  }
+
+  .site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px
+  }
+
+  .site-footer a {
+    color: white;
+  }
+
+  .site-footer a:hover {
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .footer-text {
+    padding-left: 0;
+    list-style: none
+  }
+
+  .footer-text {
+    display: block;
+    color: white;
+  }
+
+  .footer-links a {
+    color: white;
+  }
+
+  .footer-links a:active,
+  .footer-links a:focus,
+  .footer-links a:hover {
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .footer-links.inline li {
+    display: inline-block
+  }
+
+  .site-footer .social-icons {
+    text-align: right
+  }
+
+  .site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: red;
+  }
+
+  .copyright-text {
+    margin: 0
+  }
+
+  @media (max-width:991px) {
+    .site-footer [class^=col-] {
+      margin-bottom: 30px
+    }
+  }
+
+  @media (max-width:767px) {
+    .site-footer {
+      padding-bottom: 0
+    }
+
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+      text-align: center
+    }
+  }
+
+  .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-bottom: 4px
+  }
+
+  .social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 13px
+  }
+
+  .social-icons a {
+    background-color: #eceeef;
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+  }
+
+  .social-icons a:active,
+  .social-icons a:focus,
+  .social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+  }
+
+  .social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+  }
+
+  .social-icons a.facebook:hover {
+    background-color: #3b5998
+  }
+
+  .social-icons a.twitter:hover {
+    background-color: #00aced
+  }
+
+  .social-icons a.linkedin:hover {
+    background-color: #007bb6
+  }
+
+  .social-icons a.dribbble:hover {
+    background-color: #ea4c89
+  }
+
+  @media (max-width:767px) {
+    .social-icons li.title {
+      display: block;
+      margin-right: 0;
+      font-weight: 600
+    }
+  }
+
+</style>
